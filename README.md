@@ -25,7 +25,7 @@ Homepage/
 │
 ├── _layouts/
 │   ├── default.html     ← Base layout (nav + footer)
-│   ├── page.html        ← Static pages (Publications, Life, etc.)
+│   ├── page.html        ← Static pages (Publications, Blog, etc.)
 │   ├── blog.html        ← Blog listing with tag filter + sidebar
 │   └── post.html        ← Individual post with TOC and prev/next nav
 │
