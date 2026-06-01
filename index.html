@@ -1,0 +1,98 @@
+---
+layout: default
+title: Home
+---
+
+<main id="main">
+
+  {% include bio.html %}
+
+  <!-- NEWS -->
+  <section class="section section-alt" id="news">
+    <div class="section-inner">
+      <div class="section-label fade-in">Updates</div>
+      <h2 class="section-title fade-in">News</h2>
+      <ul class="news-list">
+        <li class="news-item fade-in">
+          <span class="news-date">Mar 2026</span>
+          <span class="news-text">
+            Posters accepted to <a href="https://isba2026.github.io/" target="_blank"><strong>The 2026 ISBA World Meeting</strong></a> and <a href="https://baysm2026.github.io/" target="_blank"><strong>BAYSM 2026</strong></a>.
+          </span>
+        </li>
+        <li class="news-item fade-in">
+          <span class="news-date">Aug 2025</span>
+          <span class="news-text">Starting Ph.D. at National University of Singapore.</span>
+        </li>
+        <!-- Add more news items above this line -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- SELECTED PUBLICATIONS -->
+  <section class="section" id="publications-preview">
+    <div class="section-inner">
+      <div class="section-label fade-in">Research</div>
+      <h2 class="section-title fade-in">Selected Publications</h2>
+      <p class="scholar-note fade-in">
+        <i class="ai ai-google-scholar"></i>
+        Full list on<a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank">Google Scholar</a>or<a href="{{ '/publications/' | relative_url }}">Publications page</a>.
+      </p>
+      <div class="pub-list">
+        <div class="pub-item fade-in">
+          <div class="pub-thumb">
+            <img src="{{ '/assets/images/publications/paper1.png' | relative_url }}" alt="Paper 1">
+          </div>
+          <div class="pub-body">
+            <div class="pub-title">Flexible Bayesian Quantile Regression based on the Generalized Asymmetric Huberised-type Distribution</div>
+            <div class="pub-authors"><strong>Weitao Hu</strong>, Weiping Zhang</div>
+            <div class="pub-venue">Statistics and Computing, 2024.</div>
+            <div class="pub-links">
+              <a class="pub-link" href="https://doi.org/10.1007/s11222-024-10453-1" target="_blank">[Paper]</a>
+              <a class="pub-link" href="https://github.com/kausiujik/FlexibleBQR_GAH" target="_blank">[Code]</a>
+            </div>
+          </div>
+        </div>
+        <!-- Duplicate pub-item block for more papers -->
+      </div>
+      <div class="section-more fade-in">
+        <a href="{{ '/publications/' | relative_url }}" class="btn-outline">View All Publications →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT BLOG POSTS -->
+  <section class="section section-alt" id="blog-preview">
+    <div class="section-inner">
+      <div class="section-label fade-in">Notes</div>
+      <h2 class="section-title fade-in">Recent Posts</h2>
+      <div class="blog-grid">
+        {% for post in site.posts limit:3 %}
+        <article class="blog-card fade-in">
+          {% if post.header-img %}
+          <a href="{{ post.url | relative_url }}" class="blog-card-img-wrap">
+            <img src="{{ post.header-img | relative_url }}" alt="{{ post.title }}" class="blog-card-img">
+          </a>
+          {% endif %}
+          <div class="blog-card-body">
+            <div class="blog-card-top">
+              {% for tag in post.tags %}
+              <a class="blog-tag" href="{{ '/blog/' | relative_url }}?tag={{ tag | uri_escape }}">{{ tag }}</a>
+              {% endfor %}
+              <span class="blog-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+            <a class="blog-read-more" href="{{ post.url | relative_url }}">Read more →</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      <div class="section-more fade-in">
+        <a href="{{ '/blog/' | relative_url }}" class="btn-outline">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+</main>

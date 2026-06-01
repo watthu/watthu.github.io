@@ -1,0 +1,139 @@
+# =============================================================
+#  _config.yml - Site Configuration
+# =============================================================
+
+# ── Site identity ────────────────────────────────────────────
+title:        "Weitao HU ｜ Grit Makes Perfect."
+description:  ""
+baseurl:      ""
+url:          "https://watthu.github.io"
+
+# ── Author info ──────────────────────────────────────────────
+author:
+  name:           "Weitao Hu"
+  name_zh:        "胡蔚涛"
+  title_en:       "Ph.D. Student"
+  title_zh:       "在读博士生"
+  university_en:  "National University of Singapore"
+  university_zh:  "新加坡国立大学"
+  university_url: "https://nus.edu.sg"
+  email:          "weitao.hu16@u.nus.edu"
+  github:         "watthu"
+  linkedin:       "watthu16"
+  scholar:        "hWuYh0gAAAAJ"
+  cv:             "assets/cv.pdf"
+  avatar:         "assets/images/avatar.jpeg"
+
+# ── Biography text ───────────────────────────────────────────
+bio_en: >
+  I am a Ph.D. student in the <a href="https://www.stat.nus.edu.sg/" target="_blank">Department of Statistics and Data Science</a> at the <a href="https://www.nus.edu.sg/" target="_blank">National University of Singapore</a>, advised by Prof. <a href="https://blog.nus.edu.sg/stalic/" target="_blank">Cheng Li</a>. 
+  My research interests lie broadly in Bayesian statistics, and heterogeneous data analysis. In particular, I focus on developing Bayesian methodologies for clustering (unsupervised learning) and subgroup identification (supervised learning), with applications in precision medicine and related data-driven scientific studies. My current work also explores scalable Bayesian learning and online subgroup analysis.
+  <br>
+  Before joining NUS, I obtained my M.Sc. in Statistics (Data Science) from the <a href="https://ustc.edu.cn/" target="_blank">University of Science and Technology of China</a>, where I was advised by Prof. <a href="http://staff.ustc.edu.cn/~zwp/" target="_blank">Weiping Zhang</a>. My master's research focused on Bayesian quantile regression and subgroup analysis. Prior to that, I completed the Interdisciplinary Honors Program at <a href="https://www.zju.edu.cn/" target="_blank">Zhejiang University</a>, receiving a B.Sc. in Statistics and a B.M. in Information Management and Information Systems.
+
+bio_zh: >
+  我现为<a href="https://www.stat.nus.edu.sg/" target="_blank">新加坡国立大学统计与数据科学系</a>博士研究生，师从<a href="https://blog.nus.edu.sg/stalic/" target="_blank">李成</a>教授。我的研究兴趣主要包括贝叶斯统计与异质数据分析。具体而言，我致力于发展面向聚类（无监督学习）和子群识别（监督学习）的贝叶斯方法，并将其应用于精准医疗及其他数据驱动的科研领域。目前，我的研究还涉及可扩展贝叶斯学习和在线子群分析。
+  <br>
+  在加入新加坡国立大学之前，我在<a href="https://ustc.edu.cn/" target="_blank">中国科学技术大学</a>获得统计学（数据科学）硕士学位，师从<a href="http://staff.ustc.edu.cn/~zwp/" target="_blank">张伟平</a>教授。硕士期间，我的研究主要聚焦于贝叶斯分位数回归与子群分析。更早之前，我完成了<a href="https://www.zju.edu.cn/" target="_blank">浙江大学</a>交叉学科荣誉项目的培养，获得统计学理学学士学位以及信息管理与信息系统管理学学士学位。
+
+# ── Education ────────────────────────────────────────────────
+education:
+  - degree_en: "Ph.D. in Statistics & Data Science"
+    degree_zh: "统计与数据科学 博士"
+    school_en: "National University of Singapore (NUS)"
+    school_zh: "新加坡国立大学"
+    year:      "2025–Present"
+    logo:      "assets/images/logos/NUS.jpg"
+  - degree_en: "M.Sc. in Statistics (Data Science)"
+    degree_zh: "统计学（数据科学） 理学硕士"
+    school_en: "University of Science and Technology of China (USTC)"
+    school_zh: "中国科学技术大学"
+    year:      "2022–2025"
+    logo:      "assets/images/logos/USTC.png"
+  - degree_en: "B.Sc. in Statistics & B.M. in Information Management and Information Systems (Interdisciplinary Honors Program)"
+    degree_zh: "统计学（信息管理与信息系统交叉创新平台） 理学学士"
+    school_en: "Zhejiang University (ZJU)"
+    school_zh: "浙江大学"
+    year:      "2018–2022"
+    logo:      "assets/images/logos/ZJU.png"
+
+# ── Teaching ─────────────────────────────────────────────────
+teaching:
+  - school_en: "NUS"
+    school_zh: "新加坡国立大学"
+    courses:
+      - code: "ST2132"
+        name_en: "Mathematical Statistics"
+        name_zh: "数理统计"
+        year:    "Spring 2026"
+  - school_en: "USTC"
+    school_zh: "中国科学技术大学"
+    courses:
+      - name_en: "Mathematical Statistics"
+        name_zh: "数理统计"
+        year:    "Spring 2023, 2024, 2025"
+      - name_en: "Longitudinal Data Analysis"
+        name_zh: "纵向数据分析"
+        year:    "Fall 2024"
+      - name_en: "Bayesian Analysis"
+        name_zh: "贝叶斯分析"
+        year:    "Fall 2023"
+  - school_en: "ZJU"
+    school_zh: "浙江大学"
+    courses:
+      - name_en: "Mathematical Statistics"
+        name_zh: "数理统计"
+        year:    "Spring 2022"
+      - name_en: "Probability and Mathematical Statistics"
+        name_zh: "概率论和数理统计"
+        year:    "Fall 2021"
+
+# ── Research interests ───────────────────────────────────────
+interests_en:
+  - "Statistical Learning"
+  - "Bayesian Analysis"
+  - "Quantile Regression"
+  - "Subgroup Analysis"
+
+interests_zh:
+  - "统计学习"
+  - "贝叶斯分析"
+  - "分位数回归"
+  - "子群分析"
+
+# ── Navigation links ─────────────────────────────────────────
+nav_links:
+  - title: "Home"
+    url:   "/"
+  - title: "Publications"
+    url:   "/publications/"
+  - title: "Blog"
+    url:   "/blog/"
+  - title: "Life"
+    url:   "/life/"
+
+# ── Jekyll build settings ────────────────────────────────────
+markdown:    kramdown
+highlighter: rouge
+permalink:   /blog/:year/:month/:day/:title/
+
+kramdown:
+  input:         GFM
+  math_engine:   mathjax
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ── Collections ──────────────────────────────────────────────
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path:   ""
+      type:   "posts"
+    values:
+      layout: "post"

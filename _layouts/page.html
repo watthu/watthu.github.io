@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="page-banner{% if page.header-img %} page-banner-img{% else %} post-banner-plain{% endif %}"
+  {% if page.header-img %}style="background-image: url('{{ page.header-img | relative_url }}')"{% endif %}>
+  <div class="page-banner-overlay">
+    <h1 class="page-banner-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="page-banner-sub">{{ page.subtitle }}</p>{% endif %}
+  </div>
+</div>
+
+<main id="main" class="inner-main">
+  <div class="section-inner" style="padding: 3.5rem 1.5rem; max-width: 960px; margin: 0 auto;">
+    {{ content }}
+  </div>
+</main>

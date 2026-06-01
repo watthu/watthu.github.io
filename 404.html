@@ -1,0 +1,19 @@
+---
+layout: default
+title: "404 – Page Not Found"
+permalink: /404.html
+---
+
+<div class="error-page">
+  <div class="error-code">404</div>
+  <h1 class="error-msg">Page Not Found</h1>
+  <p class="error-sub">The page you're looking for doesn't exist or has been moved.</p>
+  <a href="{{ '/' | relative_url }}" class="btn-outline">← Back to Home</a>
+</div>
+
+<style>
+.error-page { min-height: 60vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:2rem; }
+.error-code  { font-family:var(--font-serif); font-size:8rem; font-weight:600; color:var(--c-accent); opacity:.15; line-height:1; }
+.error-msg   { font-family:var(--font-serif); font-size:1.75rem; margin:-1rem 0 1rem; }
+.error-sub   { color:var(--c-text-mute); margin-bottom:2rem; }
+</style>

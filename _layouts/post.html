@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="post-banner{% unless page.header-img %} post-banner-plain{% endunless %}"
+  {% if page.header-img %}style="background-image: url('{{ page.header-img | relative_url }}')"{% endif %}>
+  <div class="post-banner-overlay">
+    <div class="post-banner-inner">
+      {% if page.tags %}
+      <div class="post-tags-row">
+        {% for tag in page.tags %}
+        <a class="post-tag" href="{{ '/blog/' | relative_url }}?tag={{ tag | uri_escape }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <h1 class="post-banner-title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="post-banner-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      <div class="post-meta">
+        <span><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%B %-d, %Y" }}</span>
+        <span><i class="fa-regular fa-user"></i> {{ page.author | default: site.author.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="inner-main">
+  <div class="post-layout">
+
+    <article class="post-content">
+      {{ content }}
+
+      <div class="post-footer">
+        {% if page.tags %}
+        <div class="post-footer-tags">
+          <i class="fa-solid fa-tags"></i>
+          {% for tag in page.tags %}
+          <a href="{{ '/blog/' | relative_url }}?tag={{ tag | uri_escape }}" class="post-tag-link">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="post-nav">
+          {% if page.previous.url %}
+          <a href="{{ page.previous.url | relative_url }}" class="post-nav-prev">← {{ page.previous.title }}</a>
+          {% endif %}
+          {% if page.next.url %}
+          <a href="{{ page.next.url | relative_url }}" class="post-nav-next">{{ page.next.title }} →</a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+
+    <aside class="post-toc-aside" id="tocAside"></aside>
+
+  </div>
+</main>

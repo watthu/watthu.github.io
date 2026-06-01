@@ -1,0 +1,31 @@
+<nav id="topnav">
+  <div class="nav-brand">
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    {% for link in site.nav_links %}
+    <li>
+      <a href="{{ link.url | relative_url }}" class="nav-item{% if page.url == link.url or page.url contains link.url and link.url != '/' %} active{% elsif link.url == '/' and page.url == '/' %} active{% endif %}">
+        {{ link.title }}
+      </a>
+    </li>
+    {% endfor %}
+    <li>
+      <button class="nav-search-btn" id="searchToggle" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search posts, tags..." autocomplete="off">
+    <button id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>

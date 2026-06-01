@@ -1,0 +1,173 @@
+<!-- ── BIOGRAPHY SECTION ─────────────────────────────────────
+     TOP ROW  : avatar (left) + biography text (right)
+     BOTTOM ROW: Education | Teaching | Interests  (3 cards)
+     Bilingual EN / ZH toggle
+──────────────────────────────────────────────────────────── -->
+<section class="section" id="bio">
+  <div class="section-inner">
+
+    <div class="profile-lang-switch fade-in">
+      <button class="lang-btn active" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="zh">中文</button>
+    </div>
+
+    <!-- ══ ENGLISH ══════════════════════════════════════════ -->
+    <div class="lang-content active" id="content-en">
+
+      <!-- Top row: avatar + bio text -->
+      <div class="bio-top-row">
+        <div class="bio-avatar-col fade-in">
+          <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="bio-avatar">
+          <div class="bio-name-block">
+            <div class="bio-name">{{ site.author.name }}</div>
+            <div class="bio-title-line">{{ site.author.title_en }}</div>
+            <div class="bio-title-line">
+              <a href="{{ site.author.university_url }}" target="_blank">{{ site.author.university_en }}</a>
+            </div>
+          </div>
+          <div class="bio-icon-links">
+            <a href="mailto:{{ site.author.email }}" title="Email"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://github.com/{{ site.author.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="{{ site.author.cv | relative_url }}" target="_blank" title="CV"><i class="fa-solid fa-file-pdf"></i></a>
+          </div>
+        </div>
+
+        <div class="bio-text-col">
+          <h2 class="section-title fade-in">Biography</h2>
+          <p class="bio-text fade-in">{{ site.bio_en }}</p>
+        </div>
+      </div>
+
+      <!-- Bottom row: 3 cards -->
+      <div class="bio-cards-row">
+
+        <!-- Education -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-graduation-cap"></i> Education</h4>
+          {% for edu in site.education %}
+          <div class="bio-card-item">
+            <img src="{{ edu.logo | relative_url }}" alt="{{ edu.school_en }}" class="bio-card-logo">
+            <div>
+              <div class="bio-card-main">{{ edu.degree_en }}</div>
+              <div class="bio-card-sub">{{ edu.school_en }}, {{ edu.year }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Teaching -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-chalkboard-user"></i> Teaching Assistant</h4>
+          {% for school in site.teaching %}
+          <div class="bio-card-school-block">
+            <div class="bio-card-school-name">{{ school.school_en }}</div>
+            {% for course in school.courses %}
+            <div class="bio-card-item">
+              <i class="fa-solid fa-circle bio-card-bullet"></i>
+              <div>
+                <div class="bio-card-main">{{ course.name_en }}{% if course.code %} ({{ course.code }}){% endif %}</div>
+                <div class="bio-card-sub">{{ course.year }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% unless forloop.last %}<hr class="bio-card-divider">{% endunless %}
+          {% endfor %}
+        </div>
+
+        <!-- Interests -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-circle-dot"></i> Interests</h4>
+          <ul class="bio-card-bullets">
+            {% for item in site.interests_en %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div><!-- /bio-cards-row -->
+    </div><!-- /content-en -->
+
+    <!-- ══ CHINESE ═══════════════════════════════════════════ -->
+    <div class="lang-content" id="content-zh">
+
+      <!-- Top row -->
+      <div class="bio-top-row">
+        <div class="bio-avatar-col fade-in">
+          <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name_zh }}" class="bio-avatar">
+          <div class="bio-name-block">
+            <div class="bio-name">{{ site.author.name_zh }}</div>
+            <div class="bio-title-line">{{ site.author.title_zh }}</div>
+            <div class="bio-title-line">
+              <a href="{{ site.author.university_url }}" target="_blank">{{ site.author.university_zh }}</a>
+            </div>
+          </div>
+          <div class="bio-icon-links">
+            <a href="mailto:{{ site.author.email }}" title="邮件"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            <a href="https://github.com/{{ site.author.github }}" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="{{ site.author.cv | relative_url }}" target="_blank" title="简历"><i class="fa-solid fa-file-pdf"></i></a>
+          </div>
+        </div>
+
+        <div class="bio-text-col">
+          <h2 class="section-title fade-in">个人简介</h2>
+          <p class="bio-text fade-in">{{ site.bio_zh }}</p>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="bio-cards-row">
+
+        <!-- Education -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-graduation-cap"></i> 教育背景</h4>
+          {% for edu in site.education %}
+          <div class="bio-card-item">
+            <img src="{{ edu.logo | relative_url }}" alt="{{ edu.school_zh }}" class="bio-card-logo">
+            <div>
+              <div class="bio-card-main">{{ edu.degree_zh }}</div>
+              <div class="bio-card-sub">{{ edu.school_zh }}，{{ edu.year }}</div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <!-- Teaching -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-chalkboard-user"></i> 助教经历</h4>
+          {% for school in site.teaching %}
+          <div class="bio-card-school-block">
+            <div class="bio-card-school-name">{{ school.school_zh }}</div>
+            {% for course in school.courses %}
+            <div class="bio-card-item">
+              <i class="fa-solid fa-circle bio-card-bullet"></i>
+              <div>
+                <div class="bio-card-main">{{ course.name_zh }}{% if course.code %} ({{ course.code }}){% endif %}</div>
+                <div class="bio-card-sub">{{ course.year }}</div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% unless forloop.last %}<hr class="bio-card-divider">{% endunless %}
+          {% endfor %}
+        </div>
+
+        <!-- Interests -->
+        <div class="bio-card fade-in">
+          <h4 class="bio-card-title"><i class="fa-solid fa-circle-dot"></i> 研究方向</h4>
+          <ul class="bio-card-bullets">
+            {% for item in site.interests_zh %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+      </div><!-- /bio-cards-row -->
+    </div><!-- /content-zh -->
+
+  </div><!-- /section-inner -->
+</section>

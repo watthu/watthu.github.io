@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="page-banner{% if page.header-img %} page-banner-img{% else %} post-banner-plain{% endif %}"
+  {% if page.header-img %}style="background-image: url('{{ page.header-img | relative_url }}')"{% endif %}>
+  <div class="page-banner-overlay">
+    <h1 class="page-banner-title">{{ page.title }}</h1>
+    {% if page.subtitle %}<p class="page-banner-sub">{{ page.subtitle }}</p>{% endif %}
+  </div>
+</div>
+
+<main id="main" class="inner-main">
+  <div class="blog-layout">
+
+    <div class="blog-posts-col">
+      <div class="blog-tag-filter fade-in" id="blogTagFilter"></div>
+      <div id="blogPostsList"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+
+    <aside class="blog-sidebar">
+      <div class="sidebar-widget fade-in">
+        <h4 class="widget-title"><i class="fa-solid fa-tags"></i> Tags</h4>
+        <div class="tag-cloud" id="sidebarTagCloud"></div>
+      </div>
+      <div class="sidebar-widget fade-in">
+        <h4 class="widget-title"><i class="fa-solid fa-clock-rotate-left"></i> Recent Posts</h4>
+        <ul class="recent-list" id="sidebarRecent"></ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- Inject post data from Jekyll into JS -->
+<script>
+const POSTS = [
+  {% for post in site.posts %}
+  {
+    title:   {{ post.title | jsonify }},
+    date:    {{ post.date | date: "%Y-%m-%d" | jsonify }},
+    url:     {{ post.url | relative_url | jsonify }},
+    tags:    {{ post.tags | jsonify }},
+    excerpt: {{ post.excerpt | strip_html | truncatewords: 30 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
+</script>
