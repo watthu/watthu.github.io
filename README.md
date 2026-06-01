@@ -1,6 +1,7 @@
 # Academic Homepage
 
 Source code for a personal academic homepage built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
+Live site: [watthu.github.io](https://watthu.github.io)
 
 ## Features
 
@@ -9,14 +10,13 @@ Source code for a personal academic homepage built with [Jekyll](https://jekyllr
 - **Math rendering** — LaTeX support via [MathJax 3](https://www.mathjax.org/)
 - **Auto-generated TOC** — Table of contents built from headings in each post
 - **Responsive design** — Mobile-friendly layout with collapsible navigation
-- **No JavaScript frameworks** — Vanilla JS, no Node.js or bundlers required
 
 ## Folder Structure
 
 ```
-username.github.io/
+Homepage/
 ├── _config.yml          ← Site config: personal info, bio, education, teaching, links
-├── Gemfile              ← Ruby dependencies
+├── Gemfile              ← Ruby dependencies (don't edit)
 ├── index.html           ← Home page
 ├── blog.html            ← Blog listing page
 ├── publications.md      ← Publications page
@@ -25,7 +25,7 @@ username.github.io/
 │
 ├── _layouts/
 │   ├── default.html     ← Base layout (nav + footer)
-│   ├── page.html        ← Static pages
+│   ├── page.html        ← Static pages (Publications, Life, etc.)
 │   ├── blog.html        ← Blog listing with tag filter + sidebar
 │   └── post.html        ← Individual post with TOC and prev/next nav
 │
