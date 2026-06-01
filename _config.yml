@@ -109,8 +109,8 @@ nav_links:
     url:   "/publications/"
   - title: "Blog"
     url:   "/blog/"
-  - title: "Life"
-    url:   "/life/"
+#  - title: "Life"
+#    url:   "/life/"
 
 # ── Jekyll build settings ────────────────────────────────────
 markdown:    kramdown
