@@ -14,7 +14,7 @@ permalink: /life/
     <div class="photo-caption">Life is like magic.</div>
   </div>
   <div class="photo-item">
-    <img src="{{ '/assets/images/life/climb.jpg' | relative_url }}" alt="climb">
+    <img src="{{ '/assets/images/life/climb.JPG' | relative_url }}" alt="climb">
     <div class="photo-caption">Life is like climbing.</div>
   </div>
   <div class="photo-item">
