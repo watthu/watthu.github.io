@@ -20,7 +20,6 @@ Homepage/
 ├── index.html           ← Home page
 ├── blog.html            ← Blog listing page
 ├── publications.md      ← Publications page
-├── life.md              ← Life page
 ├── 404.html             ← Custom 404 page
 │
 ├── _layouts/
