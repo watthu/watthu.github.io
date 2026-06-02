@@ -8,14 +8,8 @@ permalink: /publications/
 
 <span class="scholar-note">
   <i class="ai ai-google-scholar"></i>
-  Full list on <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank">Google Scholar</a> or <a href="{{ '/publications/' | relative_url }}">Publications page</a>.
+  Check out my <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank">Google Scholar</a> for the most up-to-date list of publications.
 </span>
-
-<p class="scholar-note">
-  <i class="ai ai-google-scholar"></i>
-  Check out my
-  <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank">Google Scholar</a> for the most up-to-date list of publications.
-</p>
 
 ## 2024
 
