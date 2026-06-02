@@ -6,6 +6,11 @@ header-img: "assets/images/pub-bg.jpg"
 permalink: /publications/
 ---
 
+<span class="scholar-note">
+  <i class="ai ai-google-scholar"></i>
+  Full list on <a href="https://scholar.google.com/citations?user={{ site.author.scholar }}" target="_blank">Google Scholar</a> or <a href="{{ '/publications/' | relative_url }}">Publications page</a>.
+</span>
+
 <p class="scholar-note">
   <i class="ai ai-google-scholar"></i>
   Check out my
