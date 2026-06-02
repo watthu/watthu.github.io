@@ -88,19 +88,6 @@ teaching:
         name_zh: "概率论和数理统计"
         year:    "Fall 2021"
 
-# ── Research interests ───────────────────────────────────────
-interests_en:
-  - "Statistical Learning"
-  - "Bayesian Analysis"
-  - "Quantile Regression"
-  - "Subgroup Analysis"
-
-interests_zh:
-  - "统计学习"
-  - "贝叶斯分析"
-  - "分位数回归"
-  - "子群分析"
-
 # ── Navigation links ─────────────────────────────────────────
 nav_links:
   - title: "Home"

@@ -81,9 +81,22 @@
         <div class="bio-card fade-in">
           <h4 class="bio-card-title"><i class="fa-solid fa-circle-dot"></i> Interests</h4>
           <ul class="bio-card-bullets">
-            {% for item in site.interests_en %}
-            <li>{{ item }}</li>
-            {% endfor %}
+            <li>
+              <span class="interest-title">Bayesian Analysis</span>
+              <span class="interest-desc">Prior elicitation, posterior computation, and uncertainty quantification.</span>
+            </li>
+            <li>
+              <span class="interest-title">Clustering & Subgroup Analysis</span>
+              <span class="interest-desc">Unsupervised and supervised methods for heterogeneous data.</span>
+            </li>
+            <li>
+              <span class="interest-title">Quantile Regression</span>
+              <span class="interest-desc">Flexible Bayesian models for distributional analysis.</span>
+            </li>
+            <li>
+              <span class="interest-title">Statistical Learning</span>
+              <span class="interest-desc">Theoretical foundations and methodology for supervised and unsupervised learning.</span>
+            </li>
           </ul>
         </div>
 
@@ -160,12 +173,25 @@
         <div class="bio-card fade-in">
           <h4 class="bio-card-title"><i class="fa-solid fa-circle-dot"></i> 研究方向</h4>
           <ul class="bio-card-bullets">
-            {% for item in site.interests_zh %}
-            <li>{{ item }}</li>
-            {% endfor %}
+            <li>
+              <span class="interest-title">贝叶斯分析</span>
+              <span class="interest-desc">先验指定，后验计算与不确定性度量。</span>
+            </li>
+            <li>
+              <span class="interest-title">聚类与子群分析</span>
+              <span class="interest-desc">异质数据的无监督和有监督方法。</span>
+            </li>
+            <li>
+              <span class="interest-title">分位数回归</span>
+              <span class="interest-desc">适用于分位数分析的灵活贝叶斯模型。</span>
+            </li>
+            <li>
+              <span class="interest-title">统计学习</span>
+              <span class="interest-desc">无监督学习和监督学习的理论与方法。</span>
+            </li>
           </ul>
         </div>
-
+        
       </div><!-- /bio-cards-row -->
     </div><!-- /content-zh -->
 
